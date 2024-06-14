@@ -21,7 +21,7 @@ def client_chat():
         print(f"Cannot reach the {host}:{port}")
         sys.exit(-1)
 
-    print("Connected to host --> You can start sending messages...")
+    print("Connected to remote host --> You can start sending messages...")
     sys.stdout.write("> ")
     sys.stdout.flush()
 
