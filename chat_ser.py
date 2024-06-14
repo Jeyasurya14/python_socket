@@ -26,12 +26,12 @@ def chat_server():
                 try:
                     data = server_socket.recv(RECEIVE_BUFFER).decode()
                     if data:
-                        broadcast(server_socket, sock,"{}".format(sock.peername()," Client Is Now Offline ..."))
+                        broadcast(server_socket, sock,"{}".format(sock.getpeername()," Client Is Now Offline ..."))
                     else:
                         if sock == SOCK_LIST:
                             SOCK_LIST.remove(sock)
                 except:
-                    broadcast(server_socket, sock,"{}".format(sock.peername()," Client Now Offline ..."))
+                    broadcast(server_socket, sock,"{}".format(sock.getpeername()," Client Now Offline ..."))
                     continue
 
 
