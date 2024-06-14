@@ -70,5 +70,5 @@ def main():
         print("Server shutting down...")
         server_socket.close()
 
-if name == "main":
+if __name__ == "__main__":
     main()
